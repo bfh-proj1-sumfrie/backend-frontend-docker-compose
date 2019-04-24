@@ -1,0 +1,23 @@
+version: '2'
+services:
+    backend:
+        build: ./backend/
+        environment:
+            - DB_PASSWORD=unsafe
+            - DB_USERNAME=root
+            - DB_HOST=backend-db
+            - DB_PORT=3306
+            - DB_DATABASE=docker
+            - DB_CHARSET=utf8
+            - LIMIT_MAX_SIZE=100
+        networks:
+            - backend
+        ports:
+            - "443:443"
+            - "80:80"
+        restart: always
+
+
+networks:
+    backend:
+        driver: bridge
