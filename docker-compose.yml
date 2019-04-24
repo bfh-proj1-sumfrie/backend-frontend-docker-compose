@@ -13,8 +13,15 @@ services:
         networks:
             - backend
         ports:
-            - "443:443"
-            - "80:80"
+            - "8000:80"
+        restart: always
+
+    frontend:
+        build: ./frontend/
+        networks:
+            - backend
+        ports:
+            - "8080:80"
         restart: always
 
 
