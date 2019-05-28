@@ -3,5 +3,6 @@ A docker compose setup to run the whole application dockerized
 
 ## Starting
 
-1) `docker-compose up`
-2) frontend is running on http://localhost:8080/ and the backend on http://localhost:8000/
+1) configure your `VUE_APP_API_URL` api url in the `docker-compose.yml` file
+2) `docker-compose up`
+3) frontend is running on http://localhost:8080/ and the backend on http://localhost:8000/api
