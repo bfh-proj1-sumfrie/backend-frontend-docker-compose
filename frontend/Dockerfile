@@ -18,6 +18,9 @@
 
 FROM nginx:1.15.12-alpine
 
+# Configure this value to your needs. NO slash at the end!
+ENV VUE_APP_API_URL="http://localhost:8000"
+
 RUN apk add git yarn
 RUN git clone https://github.com/bfh-proj1-sumfrie/frontend.git
 # https://julienrenaux.fr/2013/10/04/how-to-automatically-checkout-the-latest-tag-of-a-git-repository/
